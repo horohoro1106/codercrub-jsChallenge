@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project Euler 3 tasks</title>
+</head>
+<body>
+    <script>
+        /* Task 1 - sum of all multiplies (3 and 5) below 1000
+    function isOk(num) {
+        if(num % 3 == 0) {
+            return true;
+        }
+        if(num % 5 ==0) {
+            return true;
+        }
+        return false;
+    };
+    var arr=[];
+    for(var i=0;i<1000;i++){
+        if(isOk(i)){
+            arr.push(i);
+        }
+    }
+    var result = arr.reduce(function(a,b){
+        return a+b;
+    }); 
+    console.log('arr = ' + arr);
+    console.log('i = ' + i);
+    console.log(result);*/
+
+    /*Task 2 - find sum of even fibonachi nums which values don't exceed 4 millions
+    var arr =[1,2];
+    var sum = [2];
+    for(var i=0;(arr[i + 1] + arr[i]) < 4000000;i++){
+        arr[arr.length] = arr[i] + arr[i + 1];
+        if(arr[arr.length - 1] % 2 == 0) {
+            sum.push(arr[arr.length -1])
+        }
+    }
+    sum = sum.reduce(function(a,b){
+        return a + b;
+    })
+    console.log(arr);
+    console.log(sum);*/
+
+    
+    //task 3 find largest prime factor
+    /*
+    var arr=[]; // holder for prime factors
+    function isPrime(num){
+      for(var i=2;i<num;i++) {
+          if(num % i == 0) return false;
+      }
+      return true;
+    }
+    function isInteger(num){
+        return (num ^ 0) == num;
+    }
+    function getFactor(num) {
+        if(isPrime(num)){
+            arr.push(num);
+            return;
+        }
+        for(var i=2;i<num;i++) {
+            if(!isPrime(i)) {
+                continue;
+            }
+            if(isInteger(num / i)) {
+                getFactor(i);
+                getFactor(num / i);
+                break;
+            }
+        }
+    }
+    getFactor(600851475143);
+    var biggestPrimeFactor = Math.max.apply(this,arr); // we use Math.max on arr array, if you don't know know apply method you should totally read 
+    //https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
+    */
+    </script>
+</body>
+</html>
